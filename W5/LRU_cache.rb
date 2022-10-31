@@ -1,5 +1,3 @@
-
-
 class DoubleListNode
 
     attr_accessor :val, :nxt, :prev
@@ -82,7 +80,9 @@ class LRUCache
 
     def eject #Gets rid of value in O(1) time
         self.cache.delete(self.latest)
-        self.latest.nxt.prev = nil
+        self.latest = self.latest.nxt
+        self.latest.prev = nil
+    
     end
 
     private
