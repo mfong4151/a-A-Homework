@@ -5,7 +5,7 @@ class Simon
 
   def initialize
     @sequence_length = 1
-    @game_over = false
+    @game_over = false 
     @seq = []
 
   end
@@ -44,7 +44,7 @@ class Simon
         break
       end
     end
-    sleep 0.25
+    sleep 0.25s
   end
 
   def add_random_color
